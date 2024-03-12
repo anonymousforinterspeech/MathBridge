@@ -1,0 +1,41 @@
+## 6 Exponentials and Logarithms
+
+### Separable Equations
+
+The equations \(dy/dt=cy\) and \(dy/dt=cy+s\) (with constant source \(s\)) can be solved by a direct method. _The idea is to separate \(y\) from \(t\)_:
+
+\[\frac{dy}{y}=c\ dt\qquad\mbox{and}\qquad\frac{dy}{y+(s/c)}=c\ dt. \tag{2}\]
+
+All \(y\)'s are on the left side. All \(t\)'s are on the right side (and \(c\) can be on either side). This separation would not be possible for \(dy/dt=y+t\).
+
+Equation (2) contains differentials. They suggest integrals. The \(t\)-integrals give \(ct\) and the \(y\)-integrals give logarithms:
+
+\[\ln\ y=ct+\mbox{constant}\qquad\mbox{and}\qquad\ln\left(y+\frac{s}{c}\right)= ct+\mbox{constant}. \tag{3}\]
+
+_The constant is determined by the initial condition._ At \(t=0\) we require \(y=y_{0}\), and the right constant will make that happen:
+
+\[\ln\ y=ct+\ln\ y_{0}\qquad\mbox{and}\qquad\ln\left(y+\frac{s}{c}\right)=ct+ \ln\left(y_{0}+\frac{s}{c}\right). \tag{4}\]
+
+Then the final step isolates \(y\). The goal is a formula for \(y\) itself, not its logarithm, so take the exponential of both sides (\(e^{\ln y}\) is \(y\)):
+
+\[y=y_{0}e^{\alpha}\qquad\mbox{and}\qquad y+\frac{s}{c}=\left(y_{0}+\frac{s}{c} \right)e^{\alpha}. \tag{5}\]
+
+It is wise to substitute \(y\) back into the differential equation, as a check.
+
+This is our fourth method for \(y=cy+s\). Method 1 assumed from the start that \(y=Ae^{\alpha}+B\). Method 2 multiplied all inputs by their growth factors \(e^{ct-Tt}\) and added up outputs. Method 3 solved for \(y-y_{\alpha}\). Method 4 is _separation of variables_ (and all methods give the same answer). This separation method is so useful that we repeat its main idea, and then explain it by using it.
+
+_To solve \(dy/dt=u(y)p(t)\), separate \(dy/u(y)\) from \(v(t)dt\) and integrate both sides_:
+
+\[\int dy/u(y)=\int y(t)dt+C. \tag{6}\]
+
+_Then substitute the initial condition to determine \(C\), and solve for \(y(t)\)_.
+
+**Example 1**: \(dy/dt=y^{2}\) separates into \(dy/y^{2}=dt\). Integrate to reach \(-1/y=t+C\). Substitute \(t=0\) and \(y=y_{0}\) to find \(C=-1/y_{0}\). Now solve for \(y\):
+
+\[-\frac{1}{y}=t-\frac{1}{y_{0}}\qquad\mbox{and}\qquad y=\frac{y_{0}}{1-y_{0}}.\]
+
+This solution blows up (Figure 6.15a) when \(t\) reaches \(1/y_{0}\). If the bank pays interest on your deposit _squared_ (\(y=y^{2}\)), you soon have all the money in the world.
+
+**Example 2**: \(dy/dt=ty\) separates into \(dy/y=t\ dt\). Then by integration \(\ln\ y=\frac{1}{2}t^{2}+C\). Substitute \(t=0\) and \(y=y_{0}\) to find \(C=\ln\ y_{0}\). The exponential of \(\frac{1}{2}t^{2}+\ln\ y_{0}\) gives \(y=y_{0}e^{t^{2}/2}\). When the interest rate is \(c=t\), the exponent is \(t^{2}/2\).
+
+**Example 3**: \(dy/dt=y+t\) is _not separable._ Method 1 survives by assuming \(y=y_{0}\).

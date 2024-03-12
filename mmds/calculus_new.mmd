@@ -1,0 +1,17 @@
+### 4.9 Implicit Differentiation
+
+As we have seen, there is a close relationship between the derivatives of \(e^{x}\) and \(\ln x\) because these functions are inverses. Rather than relying on pictures for our understanding, we would like to be able to exploit this relationship computationally. In fact this technique can help us find derivatives in many situations, not just when we seek the derivative of an inverse function.
+
+We will begin by illustrating the technique to find what we already know, the derivative of \(\ln x\). Let's write \(y=\ln x\) and then \(x=e^{\ln x}=e^{y}\), or more simply \(x=e^{y}\). We say that this equation defines the function \(y=\ln x\) implicitly because while it is not an explicit expression \(y=\ldots\), it is true that if \(x=e^{y}\) then \(y\) is in fact the natural logarithm function. Now, for the time being, pretend that all we know of \(y\) is that \(x=e^{y}\); what can we say about derivatives? We can take the derivative of both sides of the equation:
+
+\[\frac{d}{dx}x=\frac{d}{dx}e^{y}.\]
+
+Then using the chain rule on the right hand side:
+
+\[1=\left(\frac{d}{dx}y\right)e^{y}=y^{\prime}e^{y}.\]
+
+Then we can solve for \(y^{\prime}\):
+
+\[y^{\prime}=\frac{1}{e^{y}}=\frac{1}{x}.\]
+
+There is one little difficulty here. To use the chain rule to compute \(d/dx(e^{y})=y^{\prime}e^{y}\) we need to know that the function \(y\)_has_ a derivative. All we have shown is that _if_ it has a derivative then that derivative must be \(1/x\). When using this method we will always have

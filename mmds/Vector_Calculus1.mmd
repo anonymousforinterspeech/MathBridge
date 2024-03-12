@@ -1,0 +1,23 @@
+\(ds=|{\bf r}^{\prime}|\,dt=\sqrt{1+4t^{2}}\,dt\), so the integral is
+
+\[\int_{0}^{2}f(t,t^{2})\sqrt{1+4t^{2}}\,dt=\int_{0}^{2}(t+t^{2})\sqrt{1+4t^{2}}\, dt=\frac{167}{48}\sqrt{17}-\frac{1}{12}-\frac{1}{64}\ln(4+\sqrt{17}).\]
+
+This integral of a function along a curve \(C\) is often written in abbreviated form as
+
+\[\int_{C}f(x,y)\,ds.\]
+
+Compute \(\int_{C}ye^{x}\,ds\) where \(C\) is the line segment from \((1,2)\) to \((4,7)\).
+
+We write the line segment as a vector function: \({\bf r}=\langle 1,2\rangle+t\langle 3,5\rangle\), \(0\leq t\leq 1\), or in parametric form \(x=1+3t\), \(y=2+5t\). Then
+
+\[\int_{C}ye^{x}\,ds=\int_{0}^{1}(2+5t)e^{1+3t}\sqrt{3^{2}+5^{2}}\,dt=\frac{16} {9}\sqrt{34}e^{4}-\frac{1}{9}\sqrt{34}\,e.\]
+
+All of these ideas extend to three dimensions in the obvious way.
+
+Compute \(\int_{C}x^{2}z\,ds\) where \(C\) is the line segment from \((0,6,-1)\) to \((4,1,5)\).
+
+We write the line segment as a vector function: \({\bf r}=\langle 0,6,-1\rangle+t\langle 4,-5,6\rangle\), \(0\leq t\leq 1\), or in parametric form \(x=4t\), \(y=6-5t\), \(z=-1+6t\). Then
+
+\[\int_{C}x^{2}z\,ds=\int_{0}^{1}(4t)^{2}(-1+6t)\sqrt{16+25+36}\,dt=16\sqrt{77} \int_{0}^{1}-t^{2}+6t^{3}\,dt=\frac{56}{3}\sqrt{77}.\]
+
+Now we turn to a perhaps more interesting example. Recall that in the simplest case, the work done by a force on an object is equal to the magnitude of the force times the distance the object moves; this assumes that the force is constant and in the direction of motion. We have already dealt with examples in which the force is not constant; now we are prepared to examine what happens when the force is not parallel to the direction of motion.
